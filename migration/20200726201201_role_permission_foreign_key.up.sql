@@ -1,0 +1,10 @@
+ALTER TABLE role_permissions ADD CONSTRAINT role_id
+FOREIGN KEY (role_id) REFERENCES roles(id)
+On DELETE SET NULL 
+ON UPDATE CASCADE;
+
+
+ALTER TABLE role_permissions ADD CONSTRAINT permission_id
+FOREIGN KEY (permission_id) REFERENCES permissions(id)
+On DELETE SET NULL 
+ON UPDATE CASCADE;
